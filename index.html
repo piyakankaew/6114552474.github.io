@@ -1,4 +1,71 @@
-<table border="1">
+<html>
+	<head>
+		    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+		    <script type="text/javascript">
+		      google.charts.load('current', {
+			packages: ['corechart', 'bar']
+		      });
+		      google.charts.setOnLoadCallback(drawMaterial);
+		      function drawMaterial() {
+			var data = new google.visualization.DataTable();
+			data.addColumn('string', 'ปีงบประมาณ');
+			data.addColumn('number', 'ภาษีมูลค่าเพิ่ม');
+			data.addColumn('number', 'ภาษีเงินได้นิติบุคคล');
+			data.addColumn('number', 'ภาษีเงินได้บุคคลธรรมดา');
+			data.addColumn('number', 'รายได้อื่นๆ');
+			data.addRows([
+			['2550',43.43,38.46,19.28,10.75],
+			['2552',43.18,39.22,19.82,11.65],
+			['2553',50.23,45.46,20.84,9.96],
+			['2554',57.77,57.46,23.65,12.78],
+			['2555',65.98,54.46,26.62,14.67],
+			['2556',69.77,59.22,29.9,17.51],
+			['2557',71.15,57.02,28.09,16.74],
+			['2558',70.9,56.63,30.25,15.17],
+			['2559',71.64,60.49,31.91,11.76],
+			['2560',74.23,62.6,31.45,10.97],
+
+			]);
+			var options = {
+			  title: "ผลการจัดเก็บภาษี กรมสรรพากร ปีงบประมาณ 2550-2560",
+			  colors: ['#ff8000', '#009933' , '#0099ff', '#999999'],
+			  width: 1400,
+			  height: 600,
+			  bar: {
+			    groupWidth: "75%"
+			  },
+			  axes: {
+			    y: {
+			      0: {
+				label: 'จำนวนเงิน(หมื่นล้านบาท)'
+			      }
+			    }
+			  },
+			};
+			var materialChart = new google.charts.Bar(document.getElementById('chart_div'));
+			materialChart.draw(data, google.charts.Bar.convertOptions(options));
+		      }
+			  
+	</script>
+	</head>
+	<body>
+		<table border="1">
+			<tr>
+				<td style="height:50px;">
+					<br>Time-Series<br>
+				</td>
+				<td>
+					<div id="chart_div" style="width: 800px; height: 500px;"></div>
+				</td>
+			</tr>
+		
+	</body>
+</html>  
+			 
+	
+	
+			  
+			  <table border="1">
 <tr>
 	<td style="height:50px;">
 		<br>Time-Series<br>
