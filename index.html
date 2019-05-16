@@ -1,4 +1,3 @@
-==========Time-series==========
 <html>
   <head>
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
@@ -50,11 +49,10 @@
     <div id="chart_div" style="width: 800px; height: 500px;"></div>
   </body>
 </html>
+
+
 <html>
-  <head>
-    
-<br><br>
-==========Pie chart==========
+  <head>    
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
     <script type="text/javascript">
       google.charts.load('current', {'packages':['corechart']});
@@ -63,18 +61,15 @@
       function drawChart() {
 
         var data = google.visualization.arrayToDataTable([
-          ['ประเภทภาษี', 'Hours per Day'],
-          ['ภาษีมูลค่าเพิ่ม',     11],
-          ['ภาษีนิติบุคคล',      5],
-          ['ภาษีเงินได้บุคคลธรรมดา',  3],
-          ['อื่นๆ', 2]
+          ['ประเภทภาษี', '2561'],
+          ['ภาษีมูลค่าเพิ่ม',41.40],
+					['ภาษีเงินได้นิติบุคคล',34.64],
+					['ภาษีเงินได้บุคคลธรรมดา',16.65],
+					['รายได้อื่น ๆ',7.30]
         ]);
 
         var options = {
-          title: "ผลการจัดเก็บภาษี กรมสรรพากร ปีงบประมาณ 2561",
-    			width: 800,
-   				height: 400,
-   
+          title: "ผลการจัดเก็บภาษี กรมสรรพากร ปีงบประมาณ 2561"   
         };
 
         var chart = new google.visualization.PieChart(document.getElementById('piechart'));
