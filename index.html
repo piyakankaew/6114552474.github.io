@@ -9,9 +9,9 @@
       function drawMaterial() {
         var data = new google.visualization.DataTable();
         data.addColumn('string', 'ปีงบประมาณ');
-        data.addColumn('number', 'ภาษีเงินได้บุคคลธรรมดา');
-        data.addColumn('number', 'ภาษีเงินได้นิติบุคคล');
         data.addColumn('number', 'ภาษีมูลค่าเพิ่ม');
+        data.addColumn('number', 'ภาษีเงินได้นิติบุคคล');
+        data.addColumn('number', 'ภาษีเงินได้บุคคลธรรมดา');
         data.addColumn('number', 'รายได้อื่นๆ');
         data.addRows([
         ['2550',43.43,38.46,19.28,10.75],
@@ -66,9 +66,9 @@
         var data = google.visualization.arrayToDataTable([
           ['ประเภทภาษี', '2561'],
           ['ภาษีมูลค่าเพิ่ม',41.40],
-					['ภาษีเงินได้นิติบุคคล',34.64],
-					['ภาษีเงินได้บุคคลธรรมดา',16.65],
-					['รายได้อื่น ๆ',7.30]
+	  ['ภาษีเงินได้นิติบุคคล',34.64],
+	  ['ภาษีเงินได้บุคคลธรรมดา',16.65],
+	  ['รายได้อื่น ๆ',7.30]
         ]);
 
         var options = {
