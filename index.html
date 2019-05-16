@@ -6,60 +6,60 @@
 </tr>
 <tr>
 	<td>
-<html>
-  <head>
-    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-    <script type="text/javascript">
-      google.charts.load('current', {
-        packages: ['corechart', 'bar']
-      });
-      google.charts.setOnLoadCallback(drawMaterial);
-      function drawMaterial() {
-        var data = new google.visualization.DataTable();
-        data.addColumn('string', 'ปีงบประมาณ');
-        data.addColumn('number', 'ภาษีมูลค่าเพิ่ม');
-        data.addColumn('number', 'ภาษีเงินได้นิติบุคคล');
-        data.addColumn('number', 'ภาษีเงินได้บุคคลธรรมดา');
-        data.addColumn('number', 'รายได้อื่นๆ');
-        data.addRows([
-        ['2550',43.43,38.46,19.28,10.75],
-	['2552',43.18,39.22,19.82,11.65],
-	['2553',50.23,45.46,20.84,9.96],
-	['2554',57.77,57.46,23.65,12.78],
-	['2555',65.98,54.46,26.62,14.67],
-	['2556',69.77,59.22,29.9,17.51],
-	['2557',71.15,57.02,28.09,16.74],
-	['2558',70.9,56.63,30.25,15.17],
-	['2559',71.64,60.49,31.91,11.76],
-	['2560',74.23,62.6,31.45,10.97],
+		<html>
+		  <head>
+		    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+		    <script type="text/javascript">
+		      google.charts.load('current', {
+			packages: ['corechart', 'bar']
+		      });
+		      google.charts.setOnLoadCallback(drawMaterial);
+		      function drawMaterial() {
+			var data = new google.visualization.DataTable();
+			data.addColumn('string', 'ปีงบประมาณ');
+			data.addColumn('number', 'ภาษีมูลค่าเพิ่ม');
+			data.addColumn('number', 'ภาษีเงินได้นิติบุคคล');
+			data.addColumn('number', 'ภาษีเงินได้บุคคลธรรมดา');
+			data.addColumn('number', 'รายได้อื่นๆ');
+			data.addRows([
+			['2550',43.43,38.46,19.28,10.75],
+			['2552',43.18,39.22,19.82,11.65],
+			['2553',50.23,45.46,20.84,9.96],
+			['2554',57.77,57.46,23.65,12.78],
+			['2555',65.98,54.46,26.62,14.67],
+			['2556',69.77,59.22,29.9,17.51],
+			['2557',71.15,57.02,28.09,16.74],
+			['2558',70.9,56.63,30.25,15.17],
+			['2559',71.64,60.49,31.91,11.76],
+			['2560',74.23,62.6,31.45,10.97],
 
-        ]);
-        var options = {
-          title: "ผลการจัดเก็บภาษี กรมสรรพากร ปีงบประมาณ 2550-2560",
-	  colors: ['#ff8000', '#009933' , '#0099ff', '#999999'],
-          width: 1400,
-          height: 600,
-          bar: {
-            groupWidth: "75%"
-          },
-          axes: {
-            y: {
-              0: {
-                label: 'จำนวนเงิน(หมื่นล้านบาท)'
-              }
-            }
-          },
-        };
-        var materialChart = new google.charts.Bar(document.getElementById('chart_div'));
-        materialChart.draw(data, google.charts.Bar.convertOptions(options));
-      }
-    </script>
-  </head>
-  <body>
-    <br><br>
-    <div id="chart_div" style="width: 800px; height: 500px;"></div>
-  </body>
-</html>
+			]);
+			var options = {
+			  title: "ผลการจัดเก็บภาษี กรมสรรพากร ปีงบประมาณ 2550-2560",
+			  colors: ['#ff8000', '#009933' , '#0099ff', '#999999'],
+			  width: 1400,
+			  height: 600,
+			  bar: {
+			    groupWidth: "75%"
+			  },
+			  axes: {
+			    y: {
+			      0: {
+				label: 'จำนวนเงิน(หมื่นล้านบาท)'
+			      }
+			    }
+			  },
+			};
+			var materialChart = new google.charts.Bar(document.getElementById('chart_div'));
+			materialChart.draw(data, google.charts.Bar.convertOptions(options));
+		      }
+		    </script>
+		  </head>
+		  <body>
+		    <br><br>
+		    <div id="chart_div" style="width: 800px; height: 500px;"></div>
+		  </body>
+		</html>
 	</td>
 </tr>
 <tr>
@@ -68,55 +68,57 @@
 	</td>
 </tr>
 <tr>
-<html>
-  <head> 
-	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
- 	<script type="text/javascript">
-	   	google.charts.load("current", {packages:['corechart']});
-   		google.charts.setOnLoadCallback(drawChart);
-    		function drawChart() {
-      		var data = google.visualization.arrayToDataTable([
-        		["ประเภทภาษี", "อัตราเพิ่ม", { role: "style" } ],
-        		["ภาษีมูลค่าเพิ่ม", 3.61, "#009933"],
-        		["ภาษีเงินได้นิติบุคคล", 3.49, "#009933"],
-        		["ภาษีธุรกิจเฉพาะ", -0.98, "#e60000"],
-        		["ภาษีเงินได้บุคคลธรรมดา", -1.44, "#e60000"],
-        		["อากรแสตมป์", -3.4, "#e60000"],
-        		["ภาษีเงินได้ปิโตรเลียม", -14.92, "#e60000"]
-      			]);
+	<td>
+		<html>
+		  <head> 
+			<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+			<script type="text/javascript">
+				google.charts.load("current", {packages:['corechart']});
+				google.charts.setOnLoadCallback(drawChart);
+				function drawChart() {
+				var data = google.visualization.arrayToDataTable([
+					["ประเภทภาษี", "อัตราเพิ่ม", { role: "style" } ],
+					["ภาษีมูลค่าเพิ่ม", 3.61, "#009933"],
+					["ภาษีเงินได้นิติบุคคล", 3.49, "#009933"],
+					["ภาษีธุรกิจเฉพาะ", -0.98, "#e60000"],
+					["ภาษีเงินได้บุคคลธรรมดา", -1.44, "#e60000"],
+					["อากรแสตมป์", -3.4, "#e60000"],
+					["ภาษีเงินได้ปิโตรเลียม", -14.92, "#e60000"]
+					]);
 
-     		var view = new google.visualization.DataView(data);
-      			view.setColumns([0, 1,
-                       { calc: "stringify",
-                         sourceColumn: 1,
-                         type: "string",
-                         role: "annotation" },
-                       2]);
+				var view = new google.visualization.DataView(data);
+					view.setColumns([0, 1,
+				       { calc: "stringify",
+					 sourceColumn: 1,
+					 type: "string",
+					 role: "annotation" },
+				       2]);
 
-      		var options = {
-        		title: "ผลการจัดเก็บตามประเภทภาษีของปีงบประมาณ  2560 เทียบกับปี 2559",
-        		width: 1400,
-        		height: 600,
-        		bar: {groupWidth: "80%"},
-        		legend: { position: "none" },
-        		axes: {
-            			y: {
-              				0: {
-                			label: 'อัตราเพิ่ม(%)'
-              				}
-            			}
-         		}
-      		};
-      		var chart = new google.visualization.ColumnChart(document.getElementById("columnchart_values"));
-      		chart.draw(view, options);
-  	}
-    	</script>
-  </head>
-  <body>
-    <br><br>
-    <div id="columnchart_values" style="width: 900px; height: 300px;">
-  </body>
-</html>
+				var options = {
+					title: "ผลการจัดเก็บตามประเภทภาษีของปีงบประมาณ  2560 เทียบกับปี 2559",
+					width: 1400,
+					height: 600,
+					bar: {groupWidth: "80%"},
+					legend: { position: "none" },
+					axes: {
+						y: {
+							0: {
+							label: 'อัตราเพิ่ม(%)'
+							}
+						}
+					}
+				};
+				var chart = new google.visualization.ColumnChart(document.getElementById("columnchart_values"));
+				chart.draw(view, options);
+			}
+			</script>
+		  </head>
+		  <body>
+		    <br><br>
+		    <div id="columnchart_values" style="width: 900px; height: 300px;">
+		  </body>
+		</html>
+	</td>
 </tr>
 <tr>
 	<td style="height:800px;">
@@ -125,39 +127,39 @@
 </tr>
 <tr>	
 	<td>
-<html>
-  <head>    
-    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-    <script type="text/javascript">
-      google.charts.load('current', {'packages':['corechart']});
-      google.charts.setOnLoadCallback(drawChart);
+		<html>
+		  <head>    
+		    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+		    <script type="text/javascript">
+		      google.charts.load('current', {'packages':['corechart']});
+		      google.charts.setOnLoadCallback(drawChart);
 
-      function drawChart() {
+		      function drawChart() {
 
-        var data = google.visualization.arrayToDataTable([
-          ['ประเภทภาษี', '2560'],
-          ['ภาษีมูลค่าเพิ่ม',41.41],
-	  ['ภาษีเงินได้นิติบุคคล',34.92],
-	  ['ภาษีเงินได้บุคคลธรรมดา',17.55],
-	  ['รายได้อื่น ๆ',6.12]
-        ]);
+			var data = google.visualization.arrayToDataTable([
+			  ['ประเภทภาษี', '2560'],
+			  ['ภาษีมูลค่าเพิ่ม',41.41],
+			  ['ภาษีเงินได้นิติบุคคล',34.92],
+			  ['ภาษีเงินได้บุคคลธรรมดา',17.55],
+			  ['รายได้อื่น ๆ',6.12]
+			]);
 
-        var options = {
-          title: "ผลการจัดเก็บภาษี กรมสรรพากร ปีงบประมาณ 2560",		
-	  colors: ['#ff8000', '#009933' , '#0099ff', '#999999']
-        };
+			var options = {
+			  title: "ผลการจัดเก็บภาษี กรมสรรพากร ปีงบประมาณ 2560",		
+			  colors: ['#ff8000', '#009933' , '#0099ff', '#999999']
+			};
 
-        var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+			var chart = new google.visualization.PieChart(document.getElementById('piechart'));
 
-        chart.draw(data, options);
-      }
-    </script>
-  </head>
-  <body>
-    <br><br><br><br><br><br><br><br><br><br><br><br>
-    <div id="piechart" style="width: 1200px; height: 600px;"></div>
-  </body>
-</html>
+			chart.draw(data, options);
+		      }
+		    </script>
+		  </head>
+		  <body>
+		    <br><br><br><br><br><br><br><br><br><br><br><br>
+		    <div id="piechart" style="width: 1200px; height: 600px;"></div>
+		  </body>
+		</html>
 	</td>
 </tr>
 </table>
