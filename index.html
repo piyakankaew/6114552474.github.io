@@ -53,6 +53,55 @@
   </body>
 </html>
 
+<html>
+  <head> 
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+  <script type="text/javascript">
+	   google.charts.load("current", {packages:['corechart']});
+    google.charts.setOnLoadCallback(drawChart);
+    function drawChart() {
+      var data = google.visualization.arrayToDataTable([
+        ["ประเภทภาษี", "อัตราเพิ่ม", { role: "style" } ],
+        ["ภาษีมูลค่าเพิ่ม", 3.61, "#009933"],
+        ["ภาษีเงินได้นิติบุคคล", 3.49, "#009933"],
+        ["ภาษีธุรกิจเฉพาะ", -0.98, "#e60000"],
+        ["ภาษีเงินได้บุคคลธรรมดา", -1.44, "#e60000"],
+        ["อากรแสตมป์", -3.4, "#e60000"],
+        ["ภาษีเงินได้ปิโตรเลียม", -14.92, "#e60000"]
+      ]);
+
+      var view = new google.visualization.DataView(data);
+      view.setColumns([0, 1,
+                       { calc: "stringify",
+                         sourceColumn: 1,
+                         type: "string",
+                         role: "annotation" },
+                       2]);
+
+      var options = {
+        title: "ผลการจัดเก็บตามประเภทภาษีของปีงบประมาณ  2560 เทียบกับปี 2559",
+        width: 1400,
+        height: 600,
+        bar: {groupWidth: "80%"},
+        legend: { position: "none" },
+        axes: {
+            y: {
+              0: {
+                label: 'อัตราเพิ่ม(%)'
+              }
+            }
+         }
+      };
+      var chart = new google.visualization.ColumnChart(document.getElementById("columnchart_values"));
+      chart.draw(view, options);
+  }
+    </script>
+  </head>
+  <body>
+    <br><br>
+    <div id="columnchart_values" style="width: 900px; height: 300px;">
+  </body>
+</html>
 
 <html>
   <head>    
