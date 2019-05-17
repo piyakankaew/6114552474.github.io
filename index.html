@@ -70,13 +70,12 @@
 
 			chart.draw(data, options);
 		      }
-		    </script>	
-		
-			<script type="text/javascript">
-				google.charts.load("current", {packages:['corechart']});
-				google.charts.setOnLoadCallback(drawChart);
-				function drawChart() {
-				var data = google.visualization.arrayToDataTable([
+		</script>	
+		<script type="text/javascript">
+			google.charts.load("current", {packages:['corechart']});
+			google.charts.setOnLoadCallback(drawChart);
+			function drawChart() {
+			var data = google.visualization.arrayToDataTable([
 					["ประเภทภาษี", "อัตราเพิ่ม", { role: "style" } ],
 					["ภาษีมูลค่าเพิ่ม", 3.61, "#009933"],
 					["ภาษีเงินได้นิติบุคคล", 3.49, "#009933"],
@@ -86,7 +85,7 @@
 					["ภาษีเงินได้ปิโตรเลียม", -14.92, "#e60000"]
 					]);
 
-				var view = new google.visualization.DataView(data);
+			var view = new google.visualization.DataView(data);
 					view.setColumns([0, 1,
 				       { calc: "stringify",
 					 sourceColumn: 1,
@@ -94,7 +93,7 @@
 					 role: "annotation" },
 				       2]);
 
-				var options = {
+			var options = {
 					title: "ผลการจัดเก็บตามประเภทภาษีของปีงบประมาณ  2560 เทียบกับปี 2559",
 					width: 1400,
 					height: 600,
@@ -107,10 +106,113 @@
 							}
 						}
 					}
-				};
-				var chart = new google.visualization.ColumnChart(document.getElementById("deviation"));
-				chart.draw(view, options);
+			};
+			var chart = new google.visualization.ColumnChart(document.getElementById("deviation"));
+			chart.draw(view, options);
 			}
+		</script>
+		<script type="text/javascript">
+		         google.charts.load('current', {
+			'packages':['geochart'],
+			// Note: you will need to get a mapsApiKey for your project.
+			// See: https://developers.google.com/chart/interactive/docs/basic_load_libs#load-settings
+			'mapsApiKey': 'AIzaSyD-9tSrke72PouQMnMX-a7eZSW0jkFMBWY'
+		      });
+		      google.charts.setOnLoadCallback(drawRegionsMap);
+
+		      function drawRegionsMap() {
+			var data = google.visualization.arrayToDataTable([
+			  ['Country', 'TAX','GPP'],
+			['Chiang Mai',10384.83,231726.15],
+			['Chiang Rai',2884.86,104435.12],
+			['Phetchaburi',1949.06,68488.57],
+			['Phetchabun',1329.77,76798.71],
+			['Loei',996.79,52669.57],
+			['Phrae',861.39,28379.17],
+			['Mae Hong Son',252.58,13000.32],
+			['Krabi',1846.55,89702.14],
+
+			['Kanchanaburi',6662.83,97294.39],
+			['Kalasin',1392.32,55836.01],
+			['Kamphaeng Phet',2488.22,110248.47],
+			['Khon Kaen',7234.08,204121.71],
+			['Chanthaburi',1397.88,138442.71],
+			['Chachoengsao',13385.47,341115.84],
+			['Chon Buri',129368.78,976460.34],
+			['Chai Nat',715.25,31850.33],
+			['Chaiyaphum',1577.55,60087.19],
+			['Chumphon',1440.79,79397.42],
+			['Trang',1337.19,73201.88],
+			['Trat',673.49,46964.7],
+			['Tak',1167.85,47798.57],
+			['Nakhon Nayok',760.18,26835.94],
+			['Nakhon Pathom',12030.99,42891.75],
+			['Nakhon Phanom',1444.06,332627.86],
+			['Nakhon Ratchasima',9312.57,274898.46],
+			['Nakhon Si Thammarat',3310.04,153574.76],
+			['Nakhon Sawan',3178.13,107177.57],
+			['Nonthaburi',44784.2,316625.01],
+			['Narathiwat',688.79,42736.59],
+			['Nan',1455.6,31308.2],
+			['Bueng Kan',411.69,27166.54],
+			['Buri Ram',2172.96,84333.27],
+			['Pathum Thani',38937.26,380688.44],
+			['Prachuap Khiri Khan',3911.23,92112.16],
+			['Prachin Buri',7349.67,297249.68],
+			['Pattani',720.32,55737.91],
+			['Phra Nakhon Si Ayutthaya',25178.39,403603.02],
+			['Phayao',681.35,36016.67],
+			['Phangnga',1014.74,71761.29],
+			['Phatthalung',697.19,36478.89],
+			['Phichit',882.11,45035.45],
+			['Phitsanulok',2308.92,93045.83],
+			['Phuket',10685.58,209010.62],
+			['Maha Sarakham',1254.12,56002.22],
+			['Mukdahan',1889.42,25798.52],
+			['Yasothon',623.43,26039.23],
+			['Yala',676.6,43369.43],
+			['Roi Et',1993.2,73484.66],
+			['Ranong',485.96,26770.49],
+			['Rayong',77377.54,984980.32],
+			['Ratchaburi',4634.9,172590.82],
+			['Lop Buri',2072.05,111921.47],
+			['Lampang',2031.25,68199.16],
+			['Lamphun',2459.14,77851.28],
+			['Si Sa Ket',1384.64,69573.72],
+			['Sakon Nakhon',1300,55634.28],
+			['Songkhla',12366.53,241837.96],
+			['Satun',375.39,36556.73],
+			['Samut Prakan',93392.74,717052.55],
+			['Samut Songkhram',1387.19,21881.44],
+			['Samut Sakhon',17332.64,398103.81],
+			['Sa Kaeo',1339.05,45250.17],
+			['Saraburi',10145.26,236636.1],
+			['Sing Buri',860.41,26504.89],
+			['Sukhothai',908.23,45153.1],
+			['Suphan Buri',1846.23,86743.54],
+			['Surat Thani',6253.41,211047.76],
+			['Surin',1798.23,72882.64],
+			['Nong Khai',1549.41,40052.95],
+			['Nong Bua Lam Phu',613.33,25187.04],
+			['Ang Thong',789.45,27790.9],
+			['Amnat Charoen',344.84,17654.79],
+			['Udon Thani',3179.93,111263.94],
+			['Uttaradit',863.47,38106.06],
+			['Uthai Thani',422.1,28591.8],
+			['Ubon Ratchathani',3365.33,120493.66]
+				]);
+
+			var options = {
+					region: 'TH',
+			    resolution: 'provinces',
+			    //displayMode: 'markers',
+			    colorAxis: {colors: [ 'lightyellow','yellow','gold','orange','salmon','crimson','red']}
+			};
+
+			var chart = new google.visualization.GeoChart(document.getElementById('regions_div'));
+
+			chart.draw(data, options);
+		      }
 		</script>
 	</head>
 	<body>
@@ -137,6 +239,14 @@
 				</td align="left">
 				<td>
 					<div id="piechart" style="width: 800px; height: 400px;"></div>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<br>Geo Chart<br>
+				</td align="left">
+				<td>
+					<div id="regions_div" style="width: 900px; height: 500px;"></div>
 				</td>
 			</tr>
 		
