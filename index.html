@@ -2,10 +2,11 @@
 	<head>
 		    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
 		 
+
+		    <script type="text/javascript">
 		//=================================================================
 		//=========================Time-Series=============================
 		//=================================================================
-		    <script type="text/javascript">
 		      google.charts.load('current', {
 			packages: ['corechart', 'bar']
 		      });
@@ -50,10 +51,12 @@
 			materialChart.draw(data, google.charts.Bar.convertOptions(options));
 		      }
 		</script>
+		
+		
+		<script type="text/javascript">
 		//=================================================================
 		//===========================Pie chart=============================
 		//=================================================================
-		<script type="text/javascript">
 		      google.charts.load('current', {'packages':['corechart']});
 		      google.charts.setOnLoadCallback(drawChart);
 
@@ -79,10 +82,12 @@
 			chart.draw(data, options);
 		      }
 		</script>
+		
+		
+		<script type="text/javascript">
 		//=================================================================
 		//===========================Deviation=============================
 		//=================================================================
-		<script type="text/javascript">
 			google.charts.load('current', {'packages':['corechart']});
 			google.charts.setOnLoadCallback(drawVisualization);
 
@@ -115,10 +120,12 @@
 
 			}
 		</script>
+		
+		
+		<script type="text/javascript">
 		//=================================================================
 		//=========================Distribution============================
-		//=================================================================	
-		<script type="text/javascript">
+		//=================================================================
 			google.charts.load("current", {packages:["corechart"]});
 		      google.charts.setOnLoadCallback(drawChart);
 		      function drawChart() {
@@ -217,10 +224,12 @@
 			chart.draw(data, options);
 		      }
 		</script>
+		
+		
+		<script type="text/javascript">
 		//=================================================================
 		//============================Geo==================================
-		//=================================================================	
-		<script type="text/javascript">
+		//=================================================================
 		         google.charts.load('current', {
 			'packages':['geochart'],
 			// Note: you will need to get a mapsApiKey for your project.
@@ -343,6 +352,19 @@
 				<td style="height: 40px;">
 					<br><br><br>
 					<p style="text-align: center;"><font face = "Comic sans MS" size =" 5" color = "#000000" >
+            					ผลการจัดเก็บภาษี กรมสรรพากร ปีงบประมาณ 2560
+         				</font></p>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<div id="piechart"></div>
+				</td>
+			</tr>
+			<tr>
+				<td style="height: 40px;">
+					<br><br><br>
+					<p style="text-align: center;"><font face = "Comic sans MS" size =" 5" color = "#000000" >
             					ผลการจัดเก็บภาษี กรมสรรพากร ปีงบประมาณ 2560 เทียบกับปี 2559
          				</font></p>
 				</td>
@@ -350,11 +372,6 @@
 			<tr>
 				<td align="center">
 					<div id="deviation"></div>
-				</td>
-			</tr>
-			<tr>
-				<td>
-					<div id="piechart"></div>
 				</td>
 			</tr>
 			
