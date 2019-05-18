@@ -1,6 +1,10 @@
 <html>
 	<head>
 		    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+		 
+		//=================================================================
+		//=========================Time-Series=============================
+		//=================================================================
 		    <script type="text/javascript">
 		      google.charts.load('current', {
 			packages: ['corechart', 'bar']
@@ -46,7 +50,9 @@
 			materialChart.draw(data, google.charts.Bar.convertOptions(options));
 		      }
 		</script>
-		
+		//=================================================================
+		//===========================Pie chart=============================
+		//=================================================================
 		<script type="text/javascript">
 		      google.charts.load('current', {'packages':['corechart']});
 		      google.charts.setOnLoadCallback(drawChart);
@@ -72,7 +78,10 @@
 
 			chart.draw(data, options);
 		      }
-		</script>	
+		</script>
+		//=================================================================
+		//===========================Deviation=============================
+		//=================================================================
 		<script type="text/javascript">
 			google.charts.load('current', {'packages':['corechart']});
 			google.charts.setOnLoadCallback(drawVisualization);
@@ -91,7 +100,7 @@
 			  ]);
 
 			  var options = {
-			  title : 'ผลการจัดเก็บภาษี กรมสรรพากร ปีงบประมาณ 2552-2561',
+			  //title : 'ผลการจัดเก็บภาษี กรมสรรพากร ปีงบประมาณ 2560 เทียบกับปี 2561',
 			  width: 1400,
 			  height: 600, 
 			  vAxis: {title: 'อัตราเพิ่ม(%)'},
@@ -106,7 +115,9 @@
 
 			}
 		</script>
-		
+		//=================================================================
+		//=========================Distribution============================
+		//=================================================================	
 		<script type="text/javascript">
 			google.charts.load("current", {packages:["corechart"]});
 		      google.charts.setOnLoadCallback(drawChart);
@@ -206,7 +217,9 @@
 			chart.draw(data, options);
 		      }
 		</script>
-		
+		//=================================================================
+		//============================Geo==================================
+		//=================================================================	
 		<script type="text/javascript">
 		         google.charts.load('current', {
 			'packages':['geochart'],
@@ -329,7 +342,7 @@
 			<tr>
 				<td style="height: 40px;">
 					<br><br><br>
-					<p><font face = "Comic sans MS" size =" 5" color = "#000000">
+					<p style="text-align: center;"><font face = "Comic sans MS" size =" 5" color = "#000000" >
             					ผลการจัดเก็บภาษี กรมสรรพากร ปีงบประมาณ 2560 เทียบกับปี 2559
          				</font></p>
 				</td>
