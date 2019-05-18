@@ -74,43 +74,36 @@
 		      }
 		</script>	
 		<script type="text/javascript">
-			google.charts.load("current", {packages:['corechart']});
-			google.charts.setOnLoadCallback(drawChart);
-			function drawChart() {
-			var data = google.visualization.arrayToDataTable([
-					["ประเภทภาษี", "อัตราเพิ่ม", { role: "style" } ],
-					["ภาษีมูลค่าเพิ่ม", 3.61, "#009933"],
-					["ภาษีเงินได้นิติบุคคล", 3.49, "#009933"],
-					["ภาษีธุรกิจเฉพาะ", -0.98, "#e60000"],
-					["ภาษีเงินได้บุคคลธรรมดา", -1.44, "#e60000"],
-					["อากรแสตมป์", -3.4, "#e60000"],
-					["ภาษีเงินได้ปิโตรเลียม", -14.92, "#e60000"]
-					]);
+			google.charts.load('current', {'packages':['corechart']});
+			google.charts.setOnLoadCallback(drawVisualization);
 
-			var view = new google.visualization.DataView(data);
-					view.setColumns([0, 1,
-				       { calc: "stringify",
-					 sourceColumn: 1,
-					 type: "string",
-					 role: "annotation" },
-				       2]);
+			 function drawVisualization() {
+			 var data = google.visualization.arrayToDataTable([
+			 ['ปีงบประมาณ','อัตราเพิ่ม',{ role: "style" },'REF' ,{ role: "style" }],
+			 ['ภาษีมูลค่าเพิ่ม',3.61, "#009933",0,'#000080'],
+			 ['ภาษีเงินได้นิติบุคคล',3.49, "#009933",0,'#000080'],
+			 ['ภาษีธุรกิจเฉพาะ',-0.98, "#e60000",0,'#000080'],
+			 ['ภาษีเงินได้บุคคลธรรมดา',-1.44, "#e60000",0,'#000080'],
+			 ['อากรแสตมป์',-3.4, "#e60000",0,'#000080'],
+			 ['ภาษีเงินได้ปิโตรเลียม',-14.92, "#e60000",0,'#000080']
 
-			var options = {
-					title: "ผลการจัดเก็บตามประเภทภาษีของปีงบประมาณ  2560 เทียบกับปี 2559",
-					width: '100%',
-					height: 800,
-					bar: {groupWidth: "80%"},
-					legend: { position: "none" },
-					axes: {
-						y: {
-							0: {
-							label: 'อัตราเพิ่ม(%)'
-							}
-						}
-					}
-			};
-			var chart = new google.visualization.ColumnChart(document.getElementById("deviation"));
-			chart.draw(view, options);
+
+			  ]);
+
+			  var options = {
+			  title : 'ผลการจัดเก็บภาษี กรมสรรพากร ปีงบประมาณ 2552-2561',
+			  width: 1400,
+			  height: 600, 
+			  vAxis: {title: 'อัตราเพิ่ม(%)'},
+			  hAxis: {title: 'ประเภทภาษี'},
+			  seriesType: 'bars',
+			  series: {1: {type: 'line'}},
+			  legend: { position: "none" }
+
+			  };
+			   var chart = new google.visualization.ComboChart(document.getElementById('deviation'));
+				chart.draw(data, options);
+
 			}
 		</script>
 		
