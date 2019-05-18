@@ -123,7 +123,7 @@
 		//=================================================================
 		//=====================Distribution GPP============================
 		//=================================================================
-			google.charts.load("current", {packages:["corechart"]});
+		      google.charts.load("current", {packages:["corechart"]});
 		      google.charts.setOnLoadCallback(drawChart);
 		      function drawChart() {
 			var data = google.visualization.arrayToDataTable([
@@ -211,7 +211,7 @@
 			var options = {
 			  title: 'GPP',
 			  legend: { position: 'none' },
-			  width: '100%',
+			  width: 500,
 			  height: 300,
 			  histogram: { bucketSize: 50000,
 				       lastBucketPercentile: 10},
@@ -314,7 +314,7 @@
 			  ]);
 			var options = {
 			  title: 'TAX', 
-        		  width: '100%',
+        		  width: 500,
 			  height: 300,
 			  legend: { position: 'none' },
 			  histogram: { bucketSize: 1500,
