@@ -214,7 +214,9 @@
 			  width: '100%',
 			  height: 800,
 			  histogram: { bucketSize: 50000,
-				       lastBucketPercentile: 10}
+				       lastBucketPercentile: 10},
+        		  vAxis: {title: 'จำนวนเงิน(จังหวัด)'},
+			  hAxis: {title: 'GPP(ล้านบาท)'}, 
 			};
 
 			var chart = new google.visualization.Histogram(document.getElementById('distribution_gpp'));
@@ -372,6 +374,20 @@
 				</td>
 			</tr>
 			
+			<tr>
+				<td style="height: 40px;">
+					<br><br><br><br><br><br><br><br>
+					<p style="text-align: center;"><font face = "Comic sans MS" size =" 5" color = "#000000" >
+            					GPP 2017
+         				</font></p>
+				</td>
+				<td style="height: 40px;">
+					<br><br><br><br><br><br><br><br>
+					<p style="text-align: center;"><font face = "Comic sans MS" size =" 5" color = "#000000" >
+            					TAX 2017
+         				</font></p>
+				</td>
+			</tr>
 			<tr>
 				<td>
 					<div id="distribution_gpp"></div>
